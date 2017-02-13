@@ -12,5 +12,7 @@ this is a Gomoku game's client and server, which bulid by canvas and swoole
 - records表引擎为MEMORY，用于记录棋谱状态，防止用户在同一个坐标重复行棋，以及进行判赢算法（五子棋中判断棋盘上出现活五则该玩家获胜）统计赢家。如果需要持久化存储棋谱数据，用户可自行建表，然后使用触发器保持该表与棋谱表的同步。
 注意：服务端Swoole扩展需要额外编译安装
 
-服务端在Ubuntu 14 + PHP 5.6 + Swoole 1.8.6 + MySQL 5.5下测试通过
-客户端在IE Edge，Chrome，Firefox等支持HTML5的主流浏览器下均可正常使用。
+
+##服务端在Ubuntu 14 + PHP 5.6 + Swoole 1.8.6 + MySQL 5.5下测试通过
+
+##客户端在IE Edge，Chrome，Firefox等支持HTML5的主流浏览器下均可正常使用。
