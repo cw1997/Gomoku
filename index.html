@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- author:昌维[867597730@qq.com] -->
+	<meta charset="UTF-8">
+	<title>五子棋 - gomoku.changwei.me</title>
+	<!-- 引入样式 -->
+	<link rel="stylesheet" type="text/css" href="css/welcome.css">
+	<link rel="stylesheet" type="text/css" href="css/sidebar.css">
+	<link rel="stylesheet" type="text/css" href="css/chess.css">
+  	<link rel="stylesheet" type="text/css" href="css/amazeui.min.css">
+</head>
+<body>
+	<div id="welcome">
+		<img src="images/banner.jpg" alt="" id="banner">
+		<h1>在线五子棋 Ver 1.0.0</h1>
+		<h2>作者：昌维（<a href="https://github.com/cw1997/Gomoku">https://github.com/cw1997/Gomoku</a>）</h2>
+		<h3>客户端基于HTML5 Canvas构架，服务端WebSocket基于Swoole构建</h3>
+		<button id="start_game">开始游戏</button>
+	</div>
+	<div id="main-warp">
+		<div class="am-g">
+			<div class="am-u-lg-2">
+				<ul class="am-list am-list-static">
+					<li>UID:<span id="uid"></span></li>
+					<hr>
+					<li>黑方UID:<span id="black_uid"></span></li>
+					<li>黑方IP:<span id="black_ip"></span></li>
+					<li>黑方读秒:<span id="black_second"></span></li>
+					<hr>
+					<li>白方UID:<span id="white_uid"></span></li>
+					<li>白方IP:<span id="white_ip"></span></li>
+					<li>白方读秒:<span id="white_second"></span></li>
+				</ul>
+				<hr>
+				<button id="challenge_other">发起挑战</button>
+				<ul class="am-list am-list-static" id="player-list">
+				</ul>
+			</div>
+			<div class="am-u-lg-8">
+				<div id="board-warp">
+					<canvas id="board" width="700" height="700">
+						你的电脑不支持canvas（此处为棋盘底盘画布）
+					</canvas>
+					<canvas id="chesspiece" width="700" height="700" onclick="clickBoard()" onmousemove="mouseoverBoard()">
+						你的电脑不支持canvas（此处为棋子画布）
+					</canvas>
+					<canvas id="chesspiece_hover" width="700" height="700">
+						你的电脑不支持canvas（此处为棋子鼠标hover状态画布）
+					</canvas>
+				</div>
+			</div>
+			<div class="am-u-lg-2"><textarea id="log" rows="25"></textarea></div>
+		</div>
+	</div>
+	<div id="status">
+
+	</div>
+
+</body>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/welcome.js"></script>
+<script type="text/javascript" src="js/websocket.js"></script>
+<script type="text/javascript" src="js/chess.js"></script>
+</html>

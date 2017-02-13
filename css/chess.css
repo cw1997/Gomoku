@@ -1,0 +1,22 @@
+#board-warp {
+	position: relative;
+	margin: 0 auto;
+	width: 700px;
+	height: 700px;
+	/*border: 5px solid gray;*/
+}
+/* #room {
+	display: none;
+} */
+#board, #chesspiece, #chesspiece_hover {
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 0 auto;
+}
+#chesspiece {
+	z-index: 999;
+}
+#chesspiece_hover {
+	/*z-index: -1;*/
+}
